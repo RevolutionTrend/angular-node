@@ -1,0 +1,103 @@
+/* DashboardComponent's private CSS styles */
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  h3 {
+    text-align: center; margin-bottom: 0;
+  }
+  h4 {
+    position: relative;
+  }
+  .grid {
+    margin: 0;
+  }
+  .col-1-4 {
+    width: 25%;
+  }
+  .module {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #607d8b;
+    border-radius: 2px;
+  }
+  .module:hover {
+    background-color: #eee;
+    cursor: pointer;
+    color: #607d8b;
+  }
+  .grid-pad {
+    padding: 10px 0;
+  }
+  .grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+  }
+  .pageOuter {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+    padding-right: 20px;
+  }
+  .pageOuter>.left {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none;
+  }
+  .pageOuter>.right {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  .pageBtn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid gray;
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: #000;
+  }
+  .pageBtn:hover {
+    background-color: cadetblue;
+    color: aqua;
+  }
+  .pageBtn:disabled {
+    opacity: 0.5;
+  }
+  .pageBtn:disabled:hover{
+    background-color: antiquewhite;
+    color: #000;
+  }
+  .page-count {
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+  }
+  @media (max-width: 600px) {
+    .module {
+      font-size: 10px;
+      max-height: 75px; }
+  }
+  @media (max-width: 1024px) {
+    .grid {
+      margin: 0;
+    }
+    .module {
+      min-width: 60px;
+    }
+  }

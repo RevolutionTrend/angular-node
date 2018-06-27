@@ -29,6 +29,20 @@ export class HttpService {
     )
   }
 
+  send(type: string, url: string, data?: any) {
+    const fetchType = type.toLowerCase();
+    let fetchUrl = '/api/' + url;
+    if (typeof data === 'string') {
+      fetchUrl = fetchUrl + data;
+    } else if (typeof data === 'object') {
+      fetchUrl = fetchUrl + '?' + this.objectToString(data);
+    }
+    return this.http[fetchType](fetchUrl).pipe(
+      tap(_ => console.log(`http response, fetch type "${fetchType}".`)),
+      catchError(this.handleError)
+    )
+  }
+
   private objectToString(obj: object) {
     let strArr = [];
     for (let key in obj) {
